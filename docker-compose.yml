@@ -1,0 +1,11 @@
+version: "3.6"
+
+services:
+  app:
+    image: php:7.4-cli
+    build: .
+    volumes:
+      - ./src:/app
+    command: sh -c 'php index.php newcssSumm {1,2,3,4,5,6}'
+
+#    command: sh -c 'php index.php newcssPrintIO {verbose,overwrite} [log_file=app.log] {unlimited} [methods={create,update,delete}] [paginate=50] {log}'
